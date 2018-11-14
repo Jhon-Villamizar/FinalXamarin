@@ -8,7 +8,7 @@ using System.Web;
 namespace Lugares.Api.Models
 {
     [Table("Lugares")]
-    public class Lugares
+    public class Lugar
     {
         public int Id { get; set; }
         [Required]
@@ -16,7 +16,7 @@ namespace Lugares.Api.Models
         [Required]
         public string Ciudad { get; set; }
         [Required]
-        public string Lugar { get; set; }
+        public string Ubicacion { get; set; }
         [Required]
         public string Tipo { get; set; }
         [Required]

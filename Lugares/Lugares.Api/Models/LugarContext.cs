@@ -6,13 +6,13 @@ using System.Web;
 
 namespace Lugares.Api.Models
 {
-    public class LugaresContext : DbContext
+    public class LugarContext : DbContext
     {
-        public LugaresContext() : base("LugaresConnection")
+        public LugarContext() : base("LugaresConnection")
         {
 
         }
 
-        public DbSet<Lugares> Lugares { get; set; }
+        public DbSet<Lugar> Lugares { get; set; }
     }
 }

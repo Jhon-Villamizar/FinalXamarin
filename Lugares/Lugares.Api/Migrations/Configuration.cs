@@ -5,14 +5,14 @@ namespace Lugares.Api.Migrations
     using System.Data.Entity.Migrations;
     using System.Linq;
 
-    internal sealed class Configuration : DbMigrationsConfiguration<Lugares.Api.Models.LugaresContext>
+    internal sealed class Configuration : DbMigrationsConfiguration<Lugares.Api.Models.LugarContext>
     {
         public Configuration()
         {
             AutomaticMigrationsEnabled = false;
         }
 
-        protected override void Seed(Lugares.Api.Models.LugaresContext context)
+        protected override void Seed(Lugares.Api.Models.LugarContext context)
         {
             //  This method will be called after migrating to the latest version.
 
