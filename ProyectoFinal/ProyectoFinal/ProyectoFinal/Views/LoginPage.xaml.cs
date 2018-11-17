@@ -60,7 +60,7 @@ namespace ProyectoFinal.Views
 
                 if (respuesta.EsPermitido)
                 {
-                    await Navigation.PushAsync(new RestaurantesPage());
+                    await Navigation.PushAsync(new LugaresPage());
                 }
                 else
                 {

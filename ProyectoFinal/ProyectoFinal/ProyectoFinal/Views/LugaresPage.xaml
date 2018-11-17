@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="ProyectoFinal.Views.LugaresPage"
+             Title="Lugares">
+    <ListView x:Name="listaLugares" HasUnevenRows="True" ItemSelected="Item_Selected">
+        <ListView.ItemTemplate>
+            <DataTemplate>
+                <ViewCell>
+                    <StackLayout Orientation="Vertical" Margin="10">
+                        <StackLayout Orientation="Vertical">
+                            <Label Text="{Binding Tipo}" XAlign="Center"/>
+                            <Label Text="{Binding Descripcion}" XAlign="Center"/>
+                        </StackLayout>
+
+                        <Image Source="{Binding Imagen}" Aspect="AspectFit" WidthRequest="250"/>
+                    </StackLayout>
+                </ViewCell>
+            </DataTemplate>
+        </ListView.ItemTemplate>
+    </ListView>
+</ContentPage>

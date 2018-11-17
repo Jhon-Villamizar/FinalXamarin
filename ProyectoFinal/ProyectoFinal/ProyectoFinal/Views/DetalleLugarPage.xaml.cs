@@ -1,4 +1,5 @@
-﻿using System;
+﻿using ProyectoFinal.Models;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -10,9 +11,9 @@ using Xamarin.Forms.Xaml;
 namespace ProyectoFinal.Views
 {
 	[XamlCompilation(XamlCompilationOptions.Compile)]
-	public partial class RestaurantesPage : ContentPage
+	public partial class DetalleLugarPage : ContentPage
 	{
-		public RestaurantesPage ()
+		public DetalleLugarPage (Lugar lugar)
 		{
 			InitializeComponent ();
 		}
