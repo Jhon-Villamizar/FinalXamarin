@@ -1,7 +1,9 @@
-﻿using ProyectoFinal.Models;
+﻿using Newtonsoft.Json;
+using ProyectoFinal.Models;
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Net.Http;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -18,21 +20,27 @@ namespace ProyectoFinal.Views
 			InitializeComponent ();
             CargarLugares();
         }
-        private void CargarLugares()
+        private async void CargarLugares()
         {
-            var listado = new List<Lugar>
+            HttpClient client = new HttpClient();
+            client.BaseAddress = new Uri("http://www.guialocalapi.somee.com");
+            var request = await client.GetAsync("/api/Guia");
+            if (request.IsSuccessStatusCode)
             {
-                new Lugar{Tipo="Restaurantes", Descripcion="Enacuentra los mejores lugares de la ciudad para comer", Imagen="restaurates.jpg"},
-                new Lugar{Tipo="Bares", Descripcion="Enacuentra los mejores bares de la ciudad", Imagen="bares2.jpg"},
-                new Lugar{Tipo="Cafés", Descripcion="Enacuentra los mejores cafés de la ciudad", Imagen="cafes.jpg"}
-            };
-            listaLugares.ItemsSource = listado;
+                var responseJson = await request.Content.ReadAsStringAsync();
+                var lugares = JsonConvert.DeserializeObject<List<Lugar>>(responseJson);
+                listaLugares.ItemsSource = lugares;
+            }
+            else
+            {
+                await DisplayAlert("Lo Sentimos!", "Ha Ocurrido un error de comunicacion", "OK");
+            }
         }
 
         private async void Item_Selected(object sender, SelectedItemChangedEventArgs e)
         {
             var lugar = e.SelectedItem as Lugar;
-            await Navigation.PushAsync(new DetalleLugarPage(lugar));
+            await Navigation.PushAsync(new DetallePage(lugar));
         }
     }
 }

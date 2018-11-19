@@ -3,20 +3,25 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="ProyectoFinal.Views.LugaresPage"
              Title="Lugares">
-    <ListView x:Name="listaLugares" HasUnevenRows="True" ItemSelected="Item_Selected">
-        <ListView.ItemTemplate>
-            <DataTemplate>
-                <ViewCell>
-                    <StackLayout Orientation="Vertical" Margin="10">
-                        <StackLayout Orientation="Vertical">
-                            <Label Text="{Binding Tipo}" XAlign="Center"/>
-                            <Label Text="{Binding Descripcion}" XAlign="Center"/>
+    
+        <ListView x:Name="listaLugares" HasUnevenRows="True" ItemSelected="Item_Selected">
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <ViewCell>
+                        <StackLayout Orientation="Horizontal" Margin="10">
+                            <Image Source="{Binding Imagen}" HeightRequest="70" WidthRequest="120"/>
+                            <StackLayout Orientation="Vertical">
+                                <Label Text="{Binding Nombre}" TextColor="Black"/>
+                                <StackLayout Orientation="Horizontal">
+                                <Label Text="Tipo: "/>
+                                <Label Text="{Binding Tipo}"/>
+                                </StackLayout>
+                            </StackLayout>
                         </StackLayout>
-
-                        <Image Source="{Binding Imagen}" Aspect="AspectFit" WidthRequest="250"/>
-                    </StackLayout>
-                </ViewCell>
-            </DataTemplate>
-        </ListView.ItemTemplate>
-    </ListView>
+                    </ViewCell>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+    
+    
 </ContentPage>

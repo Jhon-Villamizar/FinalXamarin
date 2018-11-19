@@ -11,11 +11,12 @@ using Xamarin.Forms.Xaml;
 namespace ProyectoFinal.Views
 {
 	[XamlCompilation(XamlCompilationOptions.Compile)]
-	public partial class DetalleLugarPage : ContentPage
+	public partial class DetallePage : ContentPage
 	{
-		public DetalleLugarPage (Lugar lugar)
+		public DetallePage (Lugar lugar)
 		{
 			InitializeComponent ();
+            BindingContext = lugar;
 		}
 	}
 }
