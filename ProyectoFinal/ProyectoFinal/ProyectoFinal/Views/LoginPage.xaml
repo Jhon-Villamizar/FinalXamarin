@@ -5,7 +5,7 @@
              Title="Login">
 
     <StackLayout VerticalOptions="Center">
-        <Image Source="cinema2.png"/>
+        <Image Source="guialocal.png"/>
         <Entry x:Name="txtUsuario" Placeholder="Usuario"/>
         <Entry x:Name="txtPassword" Placeholder="Contraseña" IsPassword="True"
 />

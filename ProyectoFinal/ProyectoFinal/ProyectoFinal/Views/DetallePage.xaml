@@ -4,39 +4,39 @@
              x:Class="ProyectoFinal.Views.DetallePage"
              Title="Detalles">
 
-    <Grid Margin="20">
-        <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="Auto"/>
-            <ColumnDefinition Width="*"/>
-        </Grid.ColumnDefinitions>
-        <Grid.RowDefinitions>
-            <RowDefinition Height="3*"/>
-            <RowDefinition Height="30"/>
-            <RowDefinition Height="30"/>
-            <RowDefinition Height="30"/>
-            <RowDefinition Height="30"/>
-            <RowDefinition Height="30"/>
-            <RowDefinition Height="30"/>
-            <RowDefinition Height="*"/>
-        </Grid.RowDefinitions>
+            <Grid Margin="20">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="Auto"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="3*"/>
+                    <RowDefinition Height="30"/>
+                    <RowDefinition Height="30"/>
+                    <RowDefinition Height="30"/>
+                    <RowDefinition Height="30"/>
+                    <RowDefinition Height="30"/>
+                </Grid.RowDefinitions>
 
-        <Image Grid.Row="0" Grid.ColumnSpan="2" Source="{Binding Imagen}"/>
-        
-        <Label Grid.Row="1" Grid.ColumnSpan="2" Text="{Binding Nombre}" XAlign="Center"/>
-        
-        <Label Grid.Row="2" Grid.Column="0" Text="Direccion:"/>
-        <Label Grid.Row="2" Grid.Column="1" Text="{Binding Direccion}"/>
+                <Image Grid.Row="0" Grid.ColumnSpan="2" Source="{Binding Imagen}"/>
 
-        <Label Grid.Row="3" Grid.Column="0" Text="Ubicacion:"/>
-        <Label Grid.Row="3" Grid.Column="1" Text="{Binding Ubicacion}"/>
+                <Label Grid.Row="1" Grid.ColumnSpan="2" Text="{Binding Nombre}" XAlign="Center"/>
 
-        <Label Grid.Row="4" Grid.Column="0" Text="Telefono:"/>
-        <Label Grid.Row="4" Grid.Column="1" Text="{Binding Telefono}"/>
+                <Label Grid.Row="2" Grid.Column="0" Text="Direccion:"/>
+                <Label Grid.Row="2" Grid.Column="1" Text="{Binding Direccion}"/>
 
-        <Label Grid.Row="5" Grid.Column="0" Text="Web:"/>
-        <Label Grid.Row="5" Grid.Column="1" Text="{Binding Web}"/>
+                <Label Grid.Row="3" Grid.Column="0" Text="Ubicacion:"/>
+                <Label Grid.Row="3" Grid.Column="1" Text="{Binding Ubicacion}"/>
 
-        <Label Grid.Row="6" Grid.Column="0" Text="Descripcion:"/>
-        <Label Grid.Row="6" Grid.Column="1" Text="{Binding Descripcion}"/>
-    </Grid>
+                <Label Grid.Row="4" Grid.Column="0" Text="Telefono:"/>
+                <Label Grid.Row="4" Grid.Column="1" Text="{Binding Telefono}"/>
+
+                <Label Grid.Row="5" Grid.Column="0" Text="Web:"/>
+                <Label Grid.Row="5" Grid.Column="1" Text="{Binding Web}"/>
+
+                <Label Grid.Row="6" Grid.Column="0" Text="Descripcion:"/>
+                <Label Grid.Row="6" Grid.Column="1" Text="{Binding Descripcion}"/>
+
+            </Grid>
+    
 </ContentPage>
