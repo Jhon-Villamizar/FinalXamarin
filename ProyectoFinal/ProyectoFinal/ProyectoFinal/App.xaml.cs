@@ -18,7 +18,7 @@ namespace ProyectoFinal
 
             InitializeComponent();
 
-            MainPage = new NavigationPage(new LugaresPage());
+            MainPage = new NavigationPage(new LoginPage());
         }
 
         protected override void OnStart()

@@ -1,5 +1,6 @@
 ﻿using Newtonsoft.Json;
 using ProyectoFinal.Models;
+using ProyectoFinal.Resources;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -28,13 +29,13 @@ namespace ProyectoFinal.Views
 
             if(string.IsNullOrEmpty(usuario))
             {
-                await DisplayAlert("Validacion", "Debe ingresar el nombre del usuario", "OK");
+                await DisplayAlert("Validacion", AppResources.ValidacionUsuario, "OK");
                 txtUsuario.Focus();
                 return;
             }
             if(string.IsNullOrEmpty(password))
             {
-                await DisplayAlert("Validacion", "Debe ingresar el password", "OK");
+                await DisplayAlert("Validacion", AppResources.ValidacionContraseña, "OK");
                 txtPassword.Focus();
                 return;
             }

@@ -3,7 +3,8 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="ProyectoFinal.Views.LugaresPage"
              xmlns:Maps="clr-namespace:Xamarin.Forms.Maps;assembly=Xamarin.Forms.Maps"
-             Title="Lugares">
+             xmlns:tdr="clr-namespace:ProyectoFinal.Helpers"
+             Title="{tdr:Translate Lugares}">
 
     <StackLayout Orientation="Vertical">
         <StackLayout VerticalOptions="StartAndExpand"  Padding="12">
@@ -18,7 +19,7 @@
                             <StackLayout Orientation="Vertical">
                                 <Label Text="{Binding Nombre}" TextColor="Black"/>
                                 <StackLayout Orientation="Horizontal">
-                                    <Label Text="Tipo: "/>
+                                    <Label Text="{tdr:Translate Tipo}"/>
                                     <Label Text="{Binding Tipo}"/>
                                 </StackLayout>
                             </StackLayout>
@@ -28,7 +29,4 @@
             </ListView.ItemTemplate>
         </ListView>
     </StackLayout>
-        
-    
-    
 </ContentPage>

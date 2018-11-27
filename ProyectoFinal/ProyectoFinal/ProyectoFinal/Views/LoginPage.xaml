@@ -2,13 +2,14 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="ProyectoFinal.Views.LoginPage"
+             xmlns:tdr="clr-namespace:ProyectoFinal.Helpers"
              Title="Login">
 
     <StackLayout VerticalOptions="Center">
-        <Image Source="guialocal.png"/>
-        <Entry x:Name="txtUsuario" Placeholder="Usuario"/>
-        <Entry x:Name="txtPassword" Placeholder="Contraseña" IsPassword="True"
+        <Image Source="guialocal.png" WidthRequest="300"/>
+        <Entry x:Name="txtUsuario" Placeholder="{tdr:Translate Usuario}"/>
+        <Entry x:Name="txtPassword" Placeholder="{tdr:Translate Contraseña}" IsPassword="True"
 />
-        <Button Text="Ingresar" Clicked="Ingresar_Click"/>
+        <Button Text="{tdr:Translate Ingresar}" Clicked="Ingresar_Click"/>
     </StackLayout>
 </ContentPage>
